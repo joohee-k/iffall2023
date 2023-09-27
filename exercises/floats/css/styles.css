@@ -1,9 +1,6 @@
 .portrait {
     float: left;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 0;
-    margin-top: 0;
+    margin: 0 2rem 2rem 0;
 }
 
 
