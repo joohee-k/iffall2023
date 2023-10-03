@@ -1,0 +1,13 @@
+body {
+    padding: 10% 10% 10% 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial', Arial, sans-serif;
+}
+
+img {
+    float: left;
+    padding: 30px;
+}
+
+div {
+    display: inline-block;
+}
