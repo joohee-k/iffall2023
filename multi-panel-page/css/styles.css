@@ -1,0 +1,133 @@
+html {
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+header {
+    background-image: url("../img/waves.jpg"); 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+    color: white;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 32px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.4;
+    object-fit: cover;
+    padding-bottom: 16px;
+}
+
+.intro_text {
+    background-color: rgb(51, 98, 163);
+    padding-bottom: 40px;
+}
+
+.intro_text img {
+    width: 400px;
+    height: 300px;
+    border: 1px solid white;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    float: right;
+    margin: 0px 0px 30px 40px;
+}
+
+
+.content_grid {
+    background-color: beige;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 7px;
+    margin-top: 0;
+}
+
+.content_grid h3,h4 {
+    color: rgb(42, 42, 42);
+}
+
+.grid {
+    padding-bottom: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.content_grid img {
+    width: 200px;
+    height: 150px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 24px;
+}
+
+.grid .item {
+    display: block;
+    width: 50%;
+}
+
+p.imgtext {
+    width: 430px;
+    color: rgb(42, 42, 42);
+}
+
+.closing_summary {
+    background-color: rgb(26, 34, 119);
+}
+
+.closing_summary p {
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+footer {
+    background-color: rgb(46, 46, 46);
+    padding-bottom: 24px;
+}
+
+footer p {
+    padding-bottom: 16px;
+    color: white;
+}
+
+.column_container {
+    width: 960px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.closing_summary .column_container {
+    width: 705px;
+    padding-bottom: 84px;
+}
+
+header .column_container {
+    padding-top: 152px;
+    padding-bottom: 184px;
+}
