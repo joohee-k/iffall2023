@@ -1,0 +1,199 @@
+html {
+    font-family: "miller-display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    main {
+        width: 90%;
+    }
+}
+
+header {
+    background-image: url(../images/pancake-1.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+@media (max-width: 640px) {
+    header {
+        height: 50vh;
+    }
+}
+
+
+.center-column-container {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+h1 {
+    font-size: 6rem;
+    padding-top: 30%;
+    padding-bottom: 20px;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+p {
+    font-size: 1rem;
+}
+
+.desc {
+    background-color: whitesmoke;
+    padding: 5%;
+    float: center;
+    margin-bottom: 50px;
+}
+
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+h2 {
+    padding-top: 25px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.info .item {
+    flex: 2;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 10px 10px 30px 10px;
+    text-align: center;
+    margin: 5px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 640px) {
+    .info .item {
+      width: 47%;
+    }
+  }
+
+
+h3 {
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.prep {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.prep .item {
+    display: block;
+}
+
+.prep .item-sub {
+    display: block;
+    width: 30%;
+    padding-right: 7%;
+}
+
+@media (max-width: 640px) {
+    .prep .item-sub {
+        width: 80%;
+    }
+}
+
+
+em {
+    color: rgb(181, 50, 50);
+}
+
+
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    width: 100%;
+    clear: both;
+    padding-bottom: 40px;
+}
+
+li img {
+    width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    float: left;
+}
+
+@media (max-width: 640px) {
+    li img {
+        width: 100%;
+    }
+}
+
+hr {
+    clear: both;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+ul.tip {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+ul li {
+    padding: 5px;
+}
+
+
+
+footer {
+    background-color: rgb(46, 46, 46);
+    padding: 40px 0px 40px 40px;
+    margin: 0;
+}
+
+footer p {
+    color: white;
+}
+
+a:link, a:visited {
+    color: white;
+}
