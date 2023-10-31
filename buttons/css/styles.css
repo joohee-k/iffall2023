@@ -1,0 +1,440 @@
+/* apple */
+
+a#btn_apple {
+    display: block;
+    width: 100px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 12px 40px 12px 40px;
+    background-color: whitesmoke;
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 12px;
+    color: rgb(63, 63, 63);
+    font-size: 25px;
+    font-family: helvetica;
+    text-decoration: none;
+}
+
+a#btn_apple:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+a#btn_apple:active {
+    background-color: #E5E5EA;
+}
+
+/* samsung */
+
+a#btn_samsung {
+    display: block;
+    width: 100px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px 40px 10px 30px;
+    border-radius: 15px;
+    background-color: #0973F7;
+    color: white;
+    font-size: 25px;
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+
+a#btn_samsung:hover {
+    font-size: 20px;
+    text-shadow: 0 0 8px #003aa5;
+    box-shadow: inset 0 0 10px #003aa5;
+    padding: 15px 40px 15px 35px;
+    transition: 0.2s;
+}
+
+a#btn_samsung:active {
+    color: #4393f5;
+}
+
+/* harley */
+
+a#btn_harley {
+    display: block;
+    position: relative;
+    width: 180px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 5px 5px 5px 5px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+    /* background-color: #252120; */
+    color: white;
+    border: 5px solid #F7811C;
+    outline: 5px solid #252120;
+    font-size: 30px;
+    font-family: "alternate-gothic-compressed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+a#btn_harley .fa-fire {
+    position: absolute;
+    font-size: 30px;
+    color: #F7811C;
+    z-index: -1;
+}
+
+a#btn_harley .fa-fire#first {
+    top: 10px;
+    left: 10px;
+}
+
+a#btn_harley .fa-fire#second {
+    left: 30px;
+    font-size: 40px;
+}
+
+a#btn_harley .fa-fire#third {
+    top: -10px;
+    left: 60px;
+    font-size: 60px;
+}
+a#btn_harley .fa-fire#fourth {
+    left: 100px;
+    font-size: 40px;
+}
+
+a#btn_harley .fa-fire#fifth {
+    top: 10px;
+    left: 130px;
+}
+ 
+a#btn_harley:hover .fa-fire {
+    transform: translate(0,-30px);
+    transition: 0.1s;
+}
+
+@keyframes fire {
+    from {transform: scale(1.3);}
+    to{transform: scale(1);}
+}
+
+a#btn_harley:hover .fa-fire::before {
+    display: block;
+    transform-origin: center bottom;
+    animation-name: fire;
+    animation-duration: .3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+a#btn_harley:active {
+    color: lightgray;
+}
+
+/* pottermore */
+
+a#btn_pottermore {
+    display: block;
+    position: relative;
+    width: 120px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px 30px 10px 30px;
+    background-color: #242633;
+    border-radius: 15px;
+    color: white;
+    font-size: 30px;
+    font-family: "birch-std", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    overflow: hidden;
+    animation: text 2s ease-in-out alternate infinite;
+}
+
+
+@keyframes text {
+    from {color: rgb(142, 124, 234)}
+    50% {color: rgb(221, 200, 102)}
+    to {color: rgb(109, 171, 135)}
+}
+
+a#btn_pottermore:hover {
+    background-color: #10141B;
+    color: white;
+    text-shadow: 0 0 3px white;
+    animation: none;
+    /* border-image: linear-gradient(to right, #8e7cea 0%,#ddc866 50%,#6dab87 100%);
+    border-image-slice: 1; */
+}
+
+a#btn_pottermore:hover::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to right, #8e7cea 0%,#ddc866 50%,#6dab87 100%);
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+a#btn_pottermore:hover::after {
+    content: 'Pottermore';
+    position: absolute;
+    padding-top: 8px;
+    left: -10px;
+    border-radius: 15px;
+    background: #242633;
+    inset: 2px;
+}
+
+
+/* colorrun */
+
+a#btn_colorrun {
+    display: block;
+    background: linear-gradient(to right, #febcdc 0%,#fe90c5 45%,#ff5dab 100%);
+    margin: auto;
+    width: 150px;
+    margin-top: 100px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #d24c8d;
+    color: white;
+    font-size: 25px;
+    font-family: "bebas-neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a#btn_colorrun:hover {
+    width: 200px;
+    letter-spacing: 5px;
+    transition: .5s;
+}
+
+a#btn_colorrun:active {
+    background: linear-gradient(to right, #d8669d 0%,#d24c8d 45%,#c9317a 100%);
+}
+
+
+/* exploding kittens */
+
+a#btn_kittens {
+    display: block;
+    background-color: #0F0F0F;
+    color: #FCF8EE;
+    margin: auto;
+    margin-top: 100px;
+    padding: 10px 0px 10px 0px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 25px;
+    font-family: "poster-cut-neue", "sans-serif";
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+a#btn_kittens:hover {
+    background-color: #A6101C;
+    color: #FCF8EE;
+    border: 3px solid #0F0F0F;
+    /* transition: 0.3s; */
+    display: block;
+    transform-origin: center;
+    animation-name: cat;
+    animation-duration: .1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes cat {
+    from {transform: rotate(5deg);}
+    to{ transform: rotate(-5deg);}
+}
+
+a#btn_kittens:active {
+    background-color: #57080f;
+}
+
+
+
+/* new yorker */
+
+a#btn_newyorker {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 30px 10px 30px;
+    color: black;
+    font-size: 30px;
+    font-family: "millisime", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a#btn_newyorker .sub {
+    font-size: 15px;
+    letter-spacing: 10px;
+}
+
+span .subsub {
+    letter-spacing: 0px;
+}
+
+a#btn_newyorker:hover {
+    text-decoration: underline;
+}
+
+img.tophat {
+    width: 50px;
+    object-fit: cover;
+}
+a#btn_newyorker:hover img.tophat {
+    transform: translate(10px,-10px) rotateZ(30deg);
+    transition: 0.5s;
+}
+
+
+/* motortrend */
+
+a#btn_motortrend {
+    display: block;
+    position: relative;
+    width: 150px;
+    margin: auto;
+    margin-top: 85px;
+    padding: 10px 40px 10px 40px;
+    background-color: rgb(36, 36, 36);
+    color: #EE331F;
+    font-size: 40px;
+    font-family: "dharma-gothic-e", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: none;
+}
+
+
+a#btn_motortrend .fa-car-side {
+    position: absolute;
+    top: -30px;
+    font-size: 30px;
+    color:rgb(36, 36, 36);
+    visibility: hidden;
+}
+
+a#btn_motortrend:hover {
+    background-color: #515151;
+    transition: transform 0.5s;
+    /* transform: rotateX(180deg);
+    transition: transform 0.5s; */
+}
+
+@keyframes car {
+    from {visibility: visible; opacity: 0;}
+    20% {opacity: 1;transform: translate(0,0);}
+    90% {opacity: 1}
+    to{ transform: translate(250%,0); opacity: 0;}
+}
+
+a#btn_motortrend:hover .fa-car-side::before {
+    display: block;
+    transform-origin: center bottom;
+    animation-name: car;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+a#btn_motortrend:active {
+    background-color: rgb(28,28,28);
+    color: #9b1e10;
+}
+
+
+/* garden */
+
+a#btn_garden {
+    display: block;
+    margin: auto;
+    margin-top: 75px;
+    color: #036A36;
+    background: linear-gradient(to right, goldenrod, goldenrod 50%, #036A36 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    font-size: 30px;
+    font-family: "laca", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+    transition: background-position 275ms ease;
+}
+
+a#btn_garden:hover {
+    background-position: 0 100%;
+}
+
+
+
+/* cartoon network */
+
+a#btn_cn {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 75px;
+    font-family: "dystopian", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a#btn_cn .c {
+    display: inline-block;
+    padding: 0px 15px 0px 15px;
+    background-color: black;
+    color: white;
+}
+
+a#btn_cn .n {
+    display: inline-block;
+    padding-right: 0px;
+    color: black;
+}
+
+a#btn_cn:hover .c {
+    background: linear-gradient(135deg, #02eaea 34%,#fcf402 52%,#ff0084 72%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0;
+    transition: .2s;
+}
+
+a#btn_cn:hover .n {
+    background-color: black;
+    padding: 0px 15px 0px 15px;
+    color: white;
+    transition: .2s;
+}
+
+a#btn_cn:active .n {
+    background-color: grey;
+}
