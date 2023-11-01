@@ -150,9 +150,9 @@ a#btn_pottermore {
     font-style: normal;
     text-decoration: none;
     overflow: hidden;
+    transform: translateZ(0);
     animation: text 2s ease-in-out alternate infinite;
 }
-
 
 @keyframes text {
     from {color: rgb(142, 124, 234)}
@@ -165,8 +165,6 @@ a#btn_pottermore:hover {
     color: white;
     text-shadow: 0 0 3px white;
     animation: none;
-    /* border-image: linear-gradient(to right, #8e7cea 0%,#ddc866 50%,#6dab87 100%);
-    border-image-slice: 1; */
 }
 
 a#btn_pottermore:hover::before {
@@ -193,7 +191,6 @@ a#btn_pottermore:hover::after {
     background: #242633;
     inset: 2px;
 }
-
 
 /* colorrun */
 
@@ -287,12 +284,12 @@ a#btn_newyorker {
 
 a#btn_newyorker .sub {
     font-size: 15px;
-    letter-spacing: 10px;
+    /* letter-spacing: 10px; */
 }
 
-span .subsub {
+/* span .subsub {
     letter-spacing: 0px;
-}
+} */
 
 a#btn_newyorker:hover {
     text-decoration: underline;
