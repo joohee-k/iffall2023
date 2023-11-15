@@ -1,0 +1,137 @@
+
+body {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.column_container {
+    width: 40%;
+    margin-left: 30vw;
+    margin-right: 10vw;
+}
+
+h1,h2 {
+    font-family: "afronaut", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+    margin: 0;
+    padding: 10vh 0 10vh 0;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    display: inline-block;
+    margin: 0;
+} 
+
+h3 {
+    font-family: "gyst-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-style: normal;
+    font-size: 2rem;
+    margin: 0;
+    padding: 5vh 0 5vh 0;
+}
+
+p {
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0 0 10vh 0;
+}
+
+
+.navbar {
+    display: block;
+    background-color: #d9d9d9;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 20%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.progress-indicator {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;;
+    display: flex;
+    flex-direction: column;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #d9d9d9;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.dot.active {
+    width: 15px;
+    height: 15px;
+    background-color: #d9d9d9;
+    border: none;
+}
+
+ul li {
+    padding: 40px 40px 0 40px;
+    margin-left: 0;
+    list-style-type: none;
+    font-family: "afronaut", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.intro {
+    background-color: #d9d9d9;
+}
+
+.phylogeny {
+    color: whitesmoke;
+    background-color: #0E00B0;
+}
+
+.taxonomy {
+    color: whitesmoke;
+    background-color: #070058;
+}
+
+.anatomy {
+    color: whitesmoke;
+    background-color: #040034;
+}
+
+.ecology {
+    color: whitesmoke;
+    background-image: url("../images/jellyfish_background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.humans {
+    color: whitesmoke;
+    background-color: black;
+}
+
+.sources {
+    background-color: #d9d9d9;
+}
