@@ -30,12 +30,39 @@
         <div class="dot" data-target="sources"></div>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".section");
+  const dots = document.querySelectorAll(".dot");
+
+  function updateActiveDot() {
+      const scrollPosition = window.scrollY;
+
+      sections.forEach((section, index) => {
+          const top = section.offsetTop - 0; // Adjust this value to fit your layout
+          const bottom = top + section.clientHeight;
+
+          if (scrollPosition >= top && scrollPosition < bottom) {
+              dots.forEach(dot => dot.classList.remove("active"));
+              dots[index].classList.add("active");
+          }
+      });
+  }
+
+  document.addEventListener("scroll", updateActiveDot);
+  window.addEventListener("resize", updateActiveDot);
+  updateActiveDot(); // Initial update
+});
+    </script>
+
 <body>
 
 
     <div class="intro">
         <div class="column_container">
             <h1>Jellyfish</h1>
+
+            <img src="images/coverjellyfish.png" alt="Pink and Blue Jellyfish">
 
             <p>Jellyfish and sea jellies are the common names given to the medusa-phase of certain gelatinous members of the subphylum Medusozoa, which is a major part of the phylum Cnidaria.</p>
 
@@ -47,14 +74,20 @@
         <div class="column_container">
             <h2 id="01">01</h2>
             <h2>Phylogeny</h2>
+
+            <img src="images/bluejellyfish.png" alt="Blue Jellyfish">
             
 
             <p>The term jellyfish broadly corresponds to medusae, that is, a life-cycle stage in the Medusozoa. The American evolutionary biologist Paulyn Cartwright gives the following general definition:</p>
 
             <p>Typically, medusozoan cnidarians have a pelagic, predatory jellyfish stage in their life cycle; staurozoans are the exceptions [as they are stalked].</p>
                 
-            <p>The Merriam-Webster dictionary defines jellyfish as follows:<br>
-            A free-swimming marine coelenterate that is the sexually reproducing form of a hydrozoan or scyphozoan and has a nearly transparent saucer-shaped body and extensible marginal tentacles studded with stinging cells.</p>
+            <p>The Merriam-Webster dictionary defines jellyfish as follows:<br></p>
+            <!-- pullquote -->
+            <h4>
+                A free-swimming marine coelenterate that is the sexually reproducing form of a hydrozoan or scyphozoan and has a nearly transparent saucer-shaped body and extensible marginal tentacles studded with stinging cells.
+            </h4>
+            <!-- pullquote -->
                 
             <p>Given that jellyfish is a common name, its mapping to biological groups is inexact. Some authorities have called the comb jellies and certain salps jellyfish, though other authorities state that neither of these are jellyfish, which they consider should be limited to certain groups within the medusozoa.</p>
                 
@@ -70,7 +103,17 @@
             <h2 id="02">02</h2>
             <h2>Taxonomy</h2>
 
-            <p>The subphylum Medusozoa includes all cnidarians with a medusa stage in their life cycle. The basic cycle is egg, planula larva, polyp, medusa, with the medusa being the sexual stage. The polyp stage is sometimes secondarily lost. The subphylum include the major taxa, Scyphozoa (large jellyfish), Cubozoa (box jellyfish) and Hydrozoa (small jellyfish), and excludes Anthozoa (corals and sea anemones). This suggests that the medusa form evolved after the polyps. Medusozoans have tetramerous symmetry, with parts in fours or multiples of four.</p>
+            <img src="images/jellyfish-3.png" alt="Pink Jellyfish">
+
+            <p>The subphylum Medusozoa includes all cnidarians with a medusa stage in their life cycle. The basic cycle is egg, planula larva, polyp, medusa, with the medusa being the sexual stage. </p>
+                
+            <!-- pullquote -->
+            <h4>
+                egg, planula larva, polyp, medusa
+            </h4>
+            <!-- pullquote -->
+            
+            <p>The polyp stage is sometimes secondarily lost. The subphylum include the major taxa, Scyphozoa (large jellyfish), Cubozoa (box jellyfish) and Hydrozoa (small jellyfish), and excludes Anthozoa (corals and sea anemones). This suggests that the medusa form evolved after the polyps. Medusozoans have tetramerous symmetry, with parts in fours or multiples of four.</p>
 
             <p>The four major classes of medusozoan Cnidaria are:</p>
 
@@ -89,15 +132,28 @@
 
         <div class="anatomy">
             <div class="column_container">
-            <h2 id="03">03</h2>
-            <h2>Anatomy</h2>
+                <div class="title">
+                    <h2 id="03">03</h2>
+                    <h2>Anatomy</h2>
+                </div>
+
+            <img src="images/jellyfish-sketch-head.png" alt="Jellyfish Head Sketch">
 
             <p>The main feature of a true jellyfish is the umbrella-shaped bell. This is a hollow structure consisting of a mass of transparent jelly-like matter known as mesoglea, which forms the hydrostatic skeleton of the animal. 95% or more of the mesogloea consists of water, but it also contains collagen and other fibrous proteins, as well as wandering amoebocytes which can engulf debris and bacteria. The mesogloea is bordered by the epidermis on the outside and the gastrodermis on the inside. The edge of the bell is often divided into rounded lobes known as lappets, which allow the bell to flex. In the gaps or niches between the lappets are dangling rudimentary sense organs known as rhopalia, and the margin of the bell often bears tentacles.</p>
+
+            <!-- pullquote -->
+            <h4>
+                umbrella-shaped bell
+
+
+            <img src="images/jellyfish-sketch-leg.png" alt="Jellyfish Body Sketch">
 
             <h3>Anatomy of a scyphozoan jellyfish</h3>
 
             <p>On the underside of the bell is the manubrium, a stalk-like structure hanging down from the centre, with the mouth, which also functions as the anus, at its tip. There are often four oral arms connected to the manubrium, streaming away into the water below. The mouth opens into the gastrovascular cavity, where digestion takes place and nutrients are absorbed. This is subdivided by four thick septa into a central stomach and four gastric pockets. The four pairs of gonads are attached to the septa, and close to them four septal funnels open to the exterior, perhaps supplying good oxygenation to the gonads. Near the free edges of the septa, gastric filaments extend into the gastric cavity; these are armed with nematocysts and enzyme-producing cells and play a role in subduing and digesting the prey. In some scyphozoans, the gastric cavity is joined to radial canals which branch extensively and may join a marginal ring canal. Cilia in these canals circulate the fluid in a regular direction.</p>
 
+            
+            <img src="images/jellyfish-sketch.png" alt="Jellyfish Sketch">
 
             <h3>Discharge mechanism of a nematocyst</h3>
 
@@ -178,6 +234,9 @@
                 <p>Aquaculture and fisheries of other species often suffer severe losses &mdash; and so losses of productivity &mdash; due to jellyfish.</p>
 
                 <h3>Products</h3>
+
+                <img src="images/jellyfish-7.png" alt="Purple Jellyfish">
+
                 <p>Aristotle stated in the Parts of Animals IV, 6 that jellyfish (sea-nettles) were eaten in wintertime in a fish stew.</p>
 
                 <p>In some countries, including China, Japan, and Korea, jellyfish are a delicacy. The jellyfish is dried to prevent spoiling. Only some 12 species of scyphozoan jellyfish belonging to the order Rhizostomeae are harvested for food, mostly in southeast Asia. Rhizostomes, especially Rhopilema esculentum in China (海蜇 hǎizhé, 'sea stingers') and Stomolophus meleagris (cannonball jellyfish) in the United States, are favored because of their larger and more rigid bodies and because their toxins are harmless to humans.</p>
@@ -187,6 +246,9 @@
                 <p>In China, processed jellyfish are desalted by soaking in water overnight and eaten cooked or raw. The dish is often served shredded with a dressing of oil, soy sauce, vinegar and sugar, or as a salad with vegetables. In Japan, cured jellyfish are rinsed, cut into strips and served with vinegar as an appetizer. Desalted, ready-to-eat products are also available.</p>
 
                 <h3>Biotechnology</h3>
+
+                <img src="images/jellyfish-5.jpg" alt="Red Jellyfish">
+
                 <p>Pliny the Elder reported in his Natural History that the slime of the jellyfish "Pulmo marinus" produced light when rubbed on a walking stick.</p>
 
                 <p>In 1961, Osamu Shimomura extracted green fluorescent protein (GFP) and another bioluminescent protein, called aequorin, from the large and abundant hydromedusa Aequorea victoria, while studying photoproteins that cause bioluminescence in this species. Three decades later, Douglas Prasher sequenced and cloned the gene for GFP. Martin Chalfie figured out how to use GFP as a fluorescent marker of genes inserted into other cells or organisms. Roger Tsien later chemically manipulated GFP to produce other fluorescent colors to use as markers. In 2008, Shimomura, Chalfie and Tsien won the Nobel Prize in Chemistry for their work with GFP. Man-made GFP became widely used as a fluorescent tag to show which cells or tissues express specific genes. The genetic engineering technique fuses the gene of interest to the GFP gene. The fused DNA is then put into a cell, to generate either a cell line or (via IVF techniques) an entire animal bearing the gene. In the cell or animal, the artificial gene turns on in the same tissues and the same time as the normal gene, making a fusion of the normal protein with GFP attached to the end, illuminating the animal or cell reveals what tissues express that protein—or at what stage of development. The fluorescence shows where the gene is expressed.</p>
@@ -195,6 +257,9 @@
                 <p>Jellyfish are displayed in many public aquariums. Often the tank's background is blue and the animals are illuminated by side light, increasing the contrast between the animal and the background. In natural conditions, many jellies are so transparent that they are nearly invisible. Jellyfish are not adapted to closed spaces. They depend on currents to transport them from place to place. Professional exhibits as in the Monterey Bay Aquarium feature precise water flows, typically in circular tanks to avoid trapping specimens in corners. The outflow is spread out over a large surface area and the inflow enters as a sheet of water in front of the outflow, so the jellyfish do not get sucked into it. As of 2009, jellyfish were becoming popular in home aquariums, where they require similar equipment.</p>
 
                 <h3>Stings</h3>
+
+                <img src="images/jellyfish-6.jpg" alt="Orange and Blue Jellyfish">
+
                 <p>Jellyfish are armed with nematocysts, a type of specialized stinging cell. Contact with a jellyfish tentacle can trigger millions of nematocysts to pierce the skin and inject venom, but only some species' venom causes an adverse reaction in humans. In a study published in Communications Biology, researchers found a jellyfish species called Cassiopea xamachana which when triggered will release tiny balls of cells that swim around the jellyfish stinging everything in their path. Researchers described these as "self-propelling microscopic grenades" and named them cassiosomes.</p>
 
                 <p>The effects of stings range from mild discomfort to extreme pain and death. Most jellyfish stings are not deadly, but stings of some box jellyfish (Irukandji jellyfish), such as the sea wasp, can be deadly. Stings may cause anaphylaxis (a form of shock), which can be fatal. Jellyfish kill 20 to 40 people a year in the Philippines alone. In 2006 the Spanish Red Cross treated 19,000 stung swimmers along the Costa Brava.</p>
