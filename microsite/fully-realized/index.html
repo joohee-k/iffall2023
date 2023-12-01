@@ -6,6 +6,43 @@
         <link rel="icon" href="images/favicon2.png">
         <link href="css/styles.css" rel="stylesheet"></link>
         <link rel="stylesheet" href="https://use.typekit.net/jvt5rup.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/28b3ca8d7e.js" crossorigin="anonymous"></script>
+        <script>
+
+            $( document ).ready(function() {			
+			    
+				$(".controls").click(function(){		
+					$("#navbox").toggleClass("open");	
+					console.log("Toggled the class!");	
+				});
+
+			});
+
+                    document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".section");
+            const dots = document.querySelectorAll(".dot");
+
+            function updateActiveDot() {
+                const scrollPosition = window.scrollY;
+
+                sections.forEach((section, 6) => {
+                    const top = section.offsetTop - 0;
+                    const bottom = 0 + section.0;
+
+                    if (scrollPosition >= top && scrollPosition < bottom) {
+                        dots.forEach(dot => dot.classList.remove("active"));
+                        dots[6].classList.add("active");
+                    }
+                });
+            }
+
+            document.addEventListener("scroll", updateActiveDot);
+            window.addEventListener("resize", updateActiveDot);
+            updateActiveDot(); // Initial update
+            });
+        </script>
     </head>
 
 
@@ -20,57 +57,44 @@
         </ul>
     </div>
 
-    <div class="progress-indicator" id="progress-indicator">
-        <div class="dot" data-target="intro"></div>
-        <div class="dot" data-target="phylogeny"></div>
-        <div class="dot" data-target="taxonomy"></div>
-        <div class="dot" data-target="anatomy"></div>
-        <div class="dot" data-target="ecology"></div>
-        <div class="dot" data-target="humans"></div>
-        <div class="dot" data-target="sources"></div>
+    <div id="navbox">
+        <button class="controls"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+        <ul id="contents">
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#01">01 Phylogeny</a></li>
+            <li><a href="#02">02 Taxonomy</a></li>
+            <li><a href="#03">03 Anatomy</a></li>
+            <li><a href="#04">04 Ecology</a></li>
+            <li><a href="#05">05 Role of Humans</a></li>
+        </ul>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".section");
-  const dots = document.querySelectorAll(".dot");
-
-  function updateActiveDot() {
-      const scrollPosition = window.scrollY;
-
-      sections.forEach((section, index) => {
-          const top = section.offsetTop - 0; // Adjust this value to fit your layout
-          const bottom = top + section.clientHeight;
-
-          if (scrollPosition >= top && scrollPosition < bottom) {
-              dots.forEach(dot => dot.classList.remove("active"));
-              dots[index].classList.add("active");
-          }
-      });
-  }
-
-  document.addEventListener("scroll", updateActiveDot);
-  window.addEventListener("resize", updateActiveDot);
-  updateActiveDot(); // Initial update
-});
-    </script>
+    <div class="progress-indicator" id="progress-indicator">
+        <div class="dot" data-target="intro"><a href="#intro"></a></div>
+        <div class="dot" data-target="phylogeny"><a href="#01"></a></div>
+        <div class="dot" data-target="taxonomy"><a href="#02"></a></div>
+        <div class="dot" data-target="anatomy"><a href="#03"></a></div>
+        <div class="dot" data-target="ecology"><a href="#04"></a></div>
+        <div class="dot" data-target="humans"><a href="#05"></a></div>
+        <div class="dot" data-target="sources"><a href="#06"></a></div>
+    </div>
 
 <body>
 
 
-    <div class="intro">
+    <div class="section intro">
         <div class="column_container">
             <h1 id="intro">Jellyfish</h1>
 
             <img id="jellyfish1" src="images/coverjellyfish.png" alt="Pink and Blue Jellyfish">
 
-            <p>Jellyfish and sea jellies are the common names given to the medusa-phase of certain gelatinous members of the subphylum Medusozoa, which is a major part of the phylum Cnidaria.<br><br> 
+            <p>Jellyfish and sea jellies are the common names given to the medusa-phase of certain gelatinous members of the subphylum Medusozoa, which is a major part of the phylum Cnidaria.</p> 
 
-            Jellyfish are mainly free-swimming marine animals with umbrella-shaped bells and trailing tentacles, although a few are anchored to the seabed by stalks rather than being mobile. The bell can pulsate to provide propulsion for highly efficient locomotion. The tentacles are armed with stinging cells and may be used to capture prey and defend against predators. Jellyfish have a complex life cycle. The medusa is normally the sexual phase, which produces planula larvae; these then disperse widely and enter a sedentary polyp phase, before reaching sexual maturity.</p>
+            <p class="lastpara">Jellyfish are mainly free-swimming marine animals with umbrella-shaped bells and trailing tentacles, although a few are anchored to the seabed by stalks rather than being mobile. The bell can pulsate to provide propulsion for highly efficient locomotion. The tentacles are armed with stinging cells and may be used to capture prey and defend against predators. Jellyfish have a complex life cycle. The medusa is normally the sexual phase, which produces planula larvae; these then disperse widely and enter a sedentary polyp phase, before reaching sexual maturity.</p>
         </div>
     </div>
 
-    <div class="phylogeny">
+    <div class="section phylogeny">
         <div class="column_container">
             <div class="title">
                 <h2 id="01">01</h2>
@@ -109,7 +133,7 @@
         </div>
     </div>
 
-    <div class="taxonomy">
+    <div class="section taxonomy">
         <div class="column_container">
             <div class="title">
                 <h2 id="02">02</h2>
@@ -140,12 +164,12 @@
                 <p>Staurozoa (stalked jellyfish) are characterized by a medusa form that is generally sessile, oriented upside down and with a stalk emerging from the apex of the "calyx" (bell), which attaches to the substrate. At least some Staurozoa also have a polyp form that alternates with the medusoid portion of the life cycle. Until recently, Staurozoa were classified within the Scyphozoa.</p>
             </div>
 
-            <p>There are over 200 species of Scyphozoa, about 50 species of Staurozoa, about 50 species of Cubozoa, and the Hydrozoa includes about 1000&ndash;1500 species that produce medusae, but many more species that do not.</p>
+            <p class="lastpara">There are over 200 species of Scyphozoa, about 50 species of Staurozoa, about 50 species of Cubozoa, and the Hydrozoa includes about 1000&ndash;1500 species that produce medusae, but many more species that do not.</p>
             
             </div>  
         </div>
 
-        <div class="anatomy">
+        <div class="section anatomy">
             <div class="column_container">
                 <div class="title">
                     <h2 id="03">03</h2>
@@ -183,11 +207,11 @@
 
             <p>In many species of jellyfish, the rhopalia include ocelli, light-sensitive organs able to tell light from dark. These are generally pigment spot ocelli, which have some of their cells pigmented. The rhopalia are suspended on stalks with heavy crystals at one end, acting like gyroscopes to orient the eyes skyward. Certain jellyfish look upward at the mangrove canopy while making a daily migration from mangrove swamps into the open lagoon, where they feed, and back again.</p>
 
-            <p>Box jellyfish have more advanced vision than the other groups. Each individual has 24 eyes, two of which are capable of seeing colour, and four parallel information processing areas that act in competition, supposedly making them one of the few kinds of animal to have a 360-degree view of its environment.</p>
+            <p class="lastpara">Box jellyfish have more advanced vision than the other groups. Each individual has 24 eyes, two of which are capable of seeing colour, and four parallel information processing areas that act in competition, supposedly making them one of the few kinds of animal to have a 360-degree view of its environment.</p>
         </div>
     </div>
 
-    <div class="ecology">
+    <div class="section ecology">
         <div class="column_container">
             <div class="title">
                 <h2 id="04">04</h2>
@@ -237,7 +261,7 @@
 
             <h3>Parasite</h3>
 
-            <p>Jellyfish are hosts to a wide variety of parasitic organisms. They act as intermediate hosts of endoparasitic helminths, with the infection being transferred to the definitive host fish after predation. Some digenean trematodes, especially species in the family Lepocreadiidae, use jellyfish as their second intermediate hosts. Fish become infected by the trematodes when they feed on infected jellyfish.</p>
+            <p class="lastpara">Jellyfish are hosts to a wide variety of parasitic organisms. They act as intermediate hosts of endoparasitic helminths, with the infection being transferred to the definitive host fish after predation. Some digenean trematodes, especially species in the family Lepocreadiidae, use jellyfish as their second intermediate hosts. Fish become infected by the trematodes when they feed on infected jellyfish.</p>
             </div>
         </div>
 
@@ -257,7 +281,7 @@
 
                 <h3>Products</h3>
 
-                <!-- <img id="jellyfish7" src="images/jellyfish-7.jpg" alt="Purple Jellyfish"> -->
+                <img id="jellyfish7" src="images/jellyfish-7.jpg" alt="Purple Jellyfish">
 
                 <h4>Aristotle stated in the Parts of Animals IV, 6 that jellyfish (sea-nettles) were eaten in wintertime in a fish stew.</h4>
 
@@ -269,7 +293,7 @@
 
                 <h3>Biotechnology</h3>
 
-                <!-- <img id="jellyfish9" src="images/jellyfish-5.jpg" alt="Red Jellyfish"> -->
+                <img id="jellyfish9" src="images/jellyfish-5.jpg" alt="Red Jellyfish">
 
                 <h4>Pliny the Elder reported in his Natural History that the slime of the jellyfish "Pulmo marinus" produced light when rubbed on a walking stick.</h4>
 
@@ -280,7 +304,7 @@
 
                 <h3>Stings</h3>
 
-                <!-- <img id="jellyfish8" src="images/jellyfish-6.jpg" alt="Orange and Blue Jellyfish"> -->
+                <img id="jellyfish8" src="images/jellyfish-6.jpg" alt="Orange and Blue Jellyfish">
 
                 <p>Jellyfish are armed with nematocysts, a type of specialized stinging cell. Contact with a jellyfish tentacle can trigger millions of nematocysts to pierce the skin and inject venom, but only some species' venom causes an adverse reaction in humans. In a study published in Communications Biology, researchers found a jellyfish species called Cassiopea xamachana which when triggered will release tiny balls of cells that swim around the jellyfish stinging everything in their path. Researchers described these as "self-propelling microscopic grenades" and named them cassiosomes.</p>
 
@@ -293,12 +317,12 @@
                 
                 <h3>Mechanical Issues</h3>
 
-                <p>Jellyfish in large quantities can fill and split fishing nets and crush captured fish. They can clog cooling equipment, having disabled power stations in several countries; jellyfish caused a cascading blackout in the Philippines in 1999, as well as damaging the Diablo Canyon Power Plant in California in 2008. They can also stop desalination plants and ships' engines.</p>
+                <p class="lastpara">Jellyfish in large quantities can fill and split fishing nets and crush captured fish. They can clog cooling equipment, having disabled power stations in several countries; jellyfish caused a cascading blackout in the Philippines in 1999, as well as damaging the Diablo Canyon Power Plant in California in 2008. They can also stop desalination plants and ships' engines.</p>
         </div>
     </div>
 
     <footer> 
-        <div class="column_container">
+        <div class="section column_container">
         <h4>Jellyfish</h4>
         <p>Designed and developed by Joohee Kim
         <br>Directed by Skye Wang
