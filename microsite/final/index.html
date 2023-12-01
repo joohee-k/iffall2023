@@ -73,7 +73,6 @@
                     const top = section.offsetTop - 100;
                     const bottom = top + section.clientHeight;
 
-                    // Check if it's the last section
                     const isLastSection = index === sections.length - 1;
 
                     if ((isLastSection && scrollPosition >= top) || (scrollPosition >= top && scrollPosition < bottom)) {
@@ -179,11 +178,6 @@
             <h4>The main feature of a true jellyfish is the umbrella-shaped bell.</h4>
 
             <p>This is a hollow structure consisting of a mass of transparent jelly-like matter known as mesoglea, which forms the hydrostatic skeleton of the animal. 95% or more of the mesogloea consists of water, but it also contains collagen and other fibrous proteins, as well as wandering amoebocytes which can engulf debris and bacteria. The mesogloea is bordered by the epidermis on the outside and the gastrodermis on the inside. The edge of the bell is often divided into rounded lobes known as lappets, which allow the bell to flex. In the gaps or niches between the lappets are dangling rudimentary sense organs known as rhopalia, and the margin of the bell often bears tentacles.</p>
-
-            <!-- pullquote -->
-            <!-- <h4>
-                umbrella-shaped bell
-            </h4> -->
 
             <img class="jellyfish" id="jellyfish5" src="images/jellyfish-sketch-leg.png" alt="Jellyfish Body Sketch">
 
@@ -329,7 +323,6 @@
                 var valx = (posx / midpointx) * 20;
                 var valy = (posy / midpointy) * 20;
 
-                // Get all elements with class "jellyfish" and apply conditional transformations
                 var jellyfishElements = document.getElementsByClassName("jellyfish");
                 Array.from(jellyfishElements).forEach(function (jellyfish) {
                     var id = jellyfish.id;
@@ -368,15 +361,14 @@
 
     <div id="blink-message">Try Moving the Cursor</div>
 
+    <!-- script for blinking -->
     <script>
         document.addEventListener("mousemove", stopBlinking);
 
     function stopBlinking() {
-        // Stop the blinking animation
         const blinkMessage = document.getElementById("blink-message");
         blinkMessage.style.animation = "none";
 
-        // Remove the event listener to avoid unnecessary checks
         document.removeEventListener("mousemove", stopBlinking);
     }
 </script>
